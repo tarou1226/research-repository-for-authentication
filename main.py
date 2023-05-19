@@ -37,7 +37,7 @@ def generate_random_numbers(test = False) -> list[int]:
     for _ in range(PIN_DIGIT):
         while True:
             # 数字の範囲はUnicode表を参照して、指定する
-            num = random().randint(PIN_MIN, PIN_MAX)
+            num = random.randint(PIN_MIN, PIN_MAX)
             # 記号のUnicodeが出てきた場合、再び数字を生成する処理
             if not ((58 <= num <= 64) or (91 <= num <= 96)):
                 num_list.append(num)
